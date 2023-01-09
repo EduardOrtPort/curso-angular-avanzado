@@ -1,0 +1,20 @@
+<div class="card border-secondary mb-3">
+  <div class="card-header">
+    <h5 class="card-title">{{weather.weather[0].main}}</h5>
+    <img src="{{BaseUrl}}/{{weather.weather[0].icon}}@2x.png" [alt]="weather.name" class="card-img-top" style="width: 50px; height: 50px;">
+  </div>
+  <div class="card-body">
+
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">{{weather.main.pressure}} <sup>hPa</sup> Pressure</li>
+      <li class="list-group-item">{{weather.main.humidity}} <sup>%</sup> Humidity</li>
+      <li class="list-group-item">{{weather.wind.speed}} <sup>m/s</sup> Wind Speed</li>
+    </ul>
+  </div>
+  <div class="card-footer">
+    {{weather.name}}, {{weather.sys.country}} / {{weather.main.temp | number:'1.0-0'}} &#8451;
+  </div>
+</div>
+
+
+
