@@ -12,13 +12,14 @@ const routes: Routes = [
   {
     path: 'weather',
     loadChildren: ()=>   import('./pages/weather/weather.module').then((m) => m.WeatherModule),
-    component: WeatherComponent,
-    resolve: {
-      weatherData: DataResolverService,
-    },
+
   },
 ];
 
+// component: WeatherComponent,
+// resolve: {
+//   weatherData: DataResolverService,
+// },
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],

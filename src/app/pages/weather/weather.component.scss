@@ -1,0 +1,62 @@
+.card {
+  border-radius: 20px;
+  width: 450px;
+  border: none;
+  box-shadow: rgb(213 213 213 / 24%) 0px 3px 8px;
+}
+
+.card-image {
+  background-color: black;
+  border-radius: 20px 20px 0px 0px;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+}
+
+.isNight {
+  border-radius: 20px 20px 0px 0px;
+  background-image: url("https://cdn.dribbble.com/users/3956332/screenshots/16044995/media/9239994ae7909ddba57c005697a09d02.png?compress=1&resize=800x600&vertical=top");
+  background-size: cover;
+}
+
+.isEvening {
+  border-radius: 20px 20px 0px 0px;
+  background-image: url("https://cdn.dribbble.com/users/3956332/screenshots/16044995/media/9239994ae7909ddba57c005697a09d02.png?compress=1&resize=800x600&vertical=top");
+  background-size: cover;
+}
+
+.isMorning {
+  border-radius: 20px 20px 0px 0px;
+  background-image: url("https://cdn.dribbble.com/users/3956332/screenshots/16044995/media/8ac027572f334d68d240c02a59742d16.png?compress=1&resize=800x600&vertical=top");
+  background-size: cover;
+}
+
+.isAfternoon {
+  border-radius: 20px 20px 0px 0px;
+  background-image: url("https://cdn.dribbble.com/users/3956332/screenshots/16044995/media/16cdb1df48707c14fcd19f3c07151e8f.png?compress=1&resize=800x600&vertical=top");
+  background-size: cover;
+}
+
+.weather-icon-bg {
+  background-color: #ffffff;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  box-shadow: rgb(213 213 213 / 24%) 0px 3px 8px;
+}
+
+.icon {
+  width: 70px;
+}
+
+.content-i {
+  display: flex;
+  margin-top: -80px;
+  margin-bottom: 20px;
+}
+
+footer {
+  width: 100%;
+  height: 50px;
+  margin-top: -25px;
+}

@@ -6,13 +6,17 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { WeatherModule } from './pages/weather/weather.module';
+import { SearchComponent } from './shared/components/search/search.component';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, 
+  imports: [
+    BrowserModule, 
     AppRoutingModule, 
     HttpClientModule, 
-    WeatherModule],
+    WeatherModule,
+    SearchComponent
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

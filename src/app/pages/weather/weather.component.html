@@ -1,20 +1,57 @@
-<div class="card border-secondary mb-3">
-  <div class="card-header">
-    <h5 class="card-title">{{weather.weather[0].main}}</h5>
-    <img src="{{BaseUrl}}/{{weather.weather[0].icon}}@2x.png" [alt]="weather.name" class="card-img-top" style="width: 50px; height: 50px;">
-  </div>
-  <div class="card-body">
+<div class="card">
 
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">{{weather.main.pressure}} <sup>hPa</sup> Pressure</li>
-      <li class="list-group-item">{{weather.main.humidity}} <sup>%</sup> Humidity</li>
-      <li class="list-group-item">{{weather.wind.speed}} <sup>m/s</sup> Wind Speed</li>
-    </ul>
+  <div class="card-image py-5" [ngClass]="{'hola': toPictureImage == '', 'isMorning': toPictureImage == 'isMorning', 'isAfternoon' : toPictureImage == 'isAfternoon', 'isEvening' : toPictureImage == 'isEvening', 'isNight' : toPictureImage == 'isNight' }">
+
+    <div class="fw-bold text-white fs-1"> 
+      {{currentTime | date:'h:mm a'}}
+    </div>
+
+    <div class="text-white fs-5">
+      {{weather.name}}, {{weather.sys.country}} / {{weather.main.temp | number:'1.0-0'}} &#8451;
+    </div>
+
   </div>
-  <div class="card-footer">
-    {{weather.name}}, {{weather.sys.country}} / {{weather.main.temp | number:'1.0-0'}} &#8451;
+
+  <div class="flex pb-4">
+    <footer>
+      <svg viewBox="0 -20 700 110" width="100%" height="50" preserveAspectRatio="none">
+        <path transform="translate(0, -20)" d="M0,10 c80,-22 240,0 350,18 c90,17 260,7.5 350,-20 v50 h-700" fill="#FFFFFF" />
+      </svg>
+    </footer>
+
+    <div class="content-i px-5">
+      <div class="weather-icon-bg">
+        <img src="{{BASE_URL}}/{{weather.weather[0].icon}}@2x.png" [alt]="weather.name" class="icon">
+      </div>
+    </div>
+
+    <div class="row align-items-start p-2 text-muted">
+      <div class="col">
+        PRESSURE
+      </div>
+      <div class="col">
+        {{weather.main.pressure}} <sup>hPa</sup>
+      </div>
+    </div>
+
+    <div class="row align-items-start p-2 text-muted">
+      <div class="col">
+        HUMIDITY
+      </div>
+      <div class="col">
+        {{weather.main.humidity}} <sup>%</sup>
+      </div>
+    </div>
+
+    <div class="row align-items-start p-2 text-muted">
+      <div class="col">
+        WIND SPEED
+      </div>
+      <div class="col">
+        {{weather.wind.speed}} <sup>m/s</sup>
+      </div>
+    </div>
+
   </div>
 </div>
-
-
 

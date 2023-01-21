@@ -14,6 +14,7 @@ import { HTTP_INTERCEPTORS } from '@angular/common/http';
   declarations: [WeatherComponent],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: WeatherInterceptor, multi: true}
-  ]
+  ], 
+  exports: [WeatherComponent]
 })
 export class WeatherModule {}

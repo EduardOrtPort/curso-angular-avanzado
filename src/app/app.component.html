@@ -1,10 +1,11 @@
-<main>
   <section class="py-5 text-center container">
     <div class="row py-lg-5">
       <div class="col-lg-6 col-md-8 mx-auto">
         <h1 class="mb-3">Weather APP</h1>
-          <router-outlet></router-outlet>
+          <app-search (submitted)="onSearch($event)">
+          </app-search>
+          <app-weather *ngIf="weather$ | async as weather" [weather]="weather" style="display: flex; justify-content: center;">
+          </app-weather>
       </div>
     </div>
   </section>
-</main>
